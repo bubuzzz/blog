@@ -23,6 +23,7 @@ In term of logging, Winston is a really good candidate package. However, if you 
 A quick and easy way is to override the behaviour of the console.log and inject the winston API into it. The good thing of meteor after 1.4 is it has the main gateway in `server/main.js` so you can be sure if you put code in this file, your code will be loaded before other files. This is not true if your project is still in 1.2 since most of the code will be loaded eagerly
 
 ```javascript
+
 'use strict';
 
 import util from 'util';
@@ -79,4 +80,5 @@ if (production) {
     }
   });
 }
+
 ```
