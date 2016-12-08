@@ -1,6 +1,6 @@
-baseurl = "http://hugo.spf13.com/"
+baseurl = "http://bubuzzz.github.io/"
 languageCode = "en-us"
-title = "Hugo Future Imperfect"
+title = "Thai Tran - Code Mess Collection"
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
 paginate = 3
