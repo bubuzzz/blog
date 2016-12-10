@@ -18,4 +18,4 @@ After a while going up and down, I decided to go back to the origin, since I am 
 
 I also use `tmux` for splitting pane on the terminal, though not really much, since I have `iterm2` on my macbook which does the same job. Most of the time I used `tmux` is on server, when I want to `ssh` to the server, start the server and detach the tmux session and continue to code/split pane in the other sesssion
 
-Overrall, it is always great to have somethings you love from the early stage of your life, isn't it ?
+Overrall, it is always great to be with something/someone you love from the early stage of your life, isn't it ?
