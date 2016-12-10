@@ -1,7 +1,7 @@
 +++
 author = "Thai Tran"
 categories = ["meteor"]
-date = "2016-12-11"
+date = "2016-12-08"
 description = "For a better logger"
 featured="logger.png"
 featuredalt = ""
