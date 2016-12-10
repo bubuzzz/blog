@@ -89,6 +89,7 @@ googleAnalytics = ""
 # The social media icons will appear on the sidebar
 [social]
     github          = "bubuzzz"
+    stackoverflow   = "bubuzzz"
     bitbucket       = ""
     jsfiddle        = ""
     codepen         = ""
