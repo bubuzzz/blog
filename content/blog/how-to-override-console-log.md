@@ -14,13 +14,13 @@ type = "post"
 
 ## Introduction
 
-`console.log` is an easy way to debug your application. If you are using console.log, there is no change in your code between the client and the server. No need to define the logger and use the logger to show the log at all. The problem of this is console.log is pretty simple and you cannot redirect the level of the log in the way you want. Also, using console.log will make your log losing the timestamp when deploying in production mode (meteor build). Thus, moving the console.log to something else is a must
+`console.log` is an easy way to debug your application. One of the big advantage in my opinion is if you use console.log, there is no change in your code between the client and the server, as in no need to define the logger and use the logger to show the log at all. The problem of this is console.log is pretty simple and you cannot redirect the level of the log in the way you want. Also, using `console.log` will make your log lose the timestamp when deploying in production mode (`meteor build`). Thus, changing the `console.log` to something else is a must
 
-In term of logging, Winston is a really good candidate package. However, if you really use it in the official way, your server code and client code will be seperated. This is not good, in my opinion, since I need to think where I am in the project in order to print out the log.
+Regarding to logging library, Winston is a really good candidate package. However, if you use it in the official way, your server code and client code will be different. This is not good, in my opinion, since I need to think where I am in the project in order to print out the log.
 
 ## Solution
 
-A quick and easy way is to override the behaviour of the console.log and inject the winston API into it. The good thing of meteor after 1.4 is it has the main gateway in `server/main.js` so you can be sure if you put code in this file, your code will be loaded before other files. Be aware  if your project is still in 1.2, this is not true since most of the code will be loaded eagerly on the server side.
+A quick and easy way is to override the behaviour of the `console.log` and inject the winston API into it. The good thing of meteor after 1.4 is it has the main gateway in `server/main.js` so you can be sure if you put code in this file (through import) **above the other import**, your code will be loaded before other files. Be aware if your project is still in 1.2, this is not true since most of the code will be loaded eagerly on the server side; therefore you have to put the import of the overriding in every files on the server side.
 
 ```javascript
 
